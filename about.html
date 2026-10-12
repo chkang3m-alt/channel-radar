@@ -1,0 +1,50 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Channel Radar</title>
+<style>
+  :root { color-scheme: light dark; --fg:#1a1a1a; --mut:#5c5c5c; --bg:#fbfbfa; --line:#e3e1dd; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e8e6e3; --mut:#9b9893; --bg:#1b1b1a; --line:#343431; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:16px/1.75 -apple-system,"Segoe UI","Malgun Gothic",system-ui,sans-serif; }
+  main { max-width:44rem; margin:0 auto; padding:3rem 1.25rem 4rem; }
+  h1 { font-size:1.6rem; margin:0 0 .25rem; letter-spacing:-.01em; }
+  .sub { color:var(--mut); margin:0 0 2.5rem; }
+  h2 { font-size:1rem; margin:2.25rem 0 .5rem; }
+  p, li { color:var(--fg); }
+  ul { padding-left:1.1rem; }
+  footer { margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--line);
+           color:var(--mut); font-size:.875rem; }
+  a { color:inherit; }
+</style>
+<main>
+  <h1>Channel Radar</h1>
+  <p class="sub">한국 리테일 채널 뉴스 데일리 다이제스트</p>
+
+  <p>Channel Radar 는 한국 리테일 채널(대형마트·편의점·이커머스·균일가점 등) 관련
+  공개 뉴스 기사를 매일 아침 모아 요약하고, 운영자 본인에게 이메일 한 통으로 보내는
+  개인용 도구입니다. 공개 서비스가 아니며 가입이나 구독 기능이 없습니다.</p>
+
+  <h2>무엇을 하나</h2>
+  <ul>
+    <li>공개된 뉴스 검색 결과에서 전날 기사 목록을 모은다</li>
+    <li>중복 사건을 묶고, 관련도 기준으로 10건 이내를 고른다</li>
+    <li>각 기사의 요약을 만들어 HTML 이메일로 구성한다</li>
+    <li>운영자 본인의 Gmail 계정에서 운영자 본인에게 발송한다</li>
+  </ul>
+
+  <h2>누가 쓰나</h2>
+  <p>운영자 한 사람입니다. 다른 사용자를 받지 않습니다.</p>
+
+  <h2>Gmail 권한</h2>
+  <p>발송을 위해 Gmail API 의 <code>gmail.send</code> 범위 하나만 사용합니다.
+  메일을 읽거나, 지우거나, 메일함을 조회하는 권한은 요청하지 않습니다.
+  자세한 내용은 <a href="privacy.html">개인정보처리방침</a>에 있습니다.</p>
+
+  <footer>
+    <a href="./">오늘의 다이제스트</a> ·
+    <a href="privacy.html">개인정보처리방침</a>
+  </footer>
+</main>
